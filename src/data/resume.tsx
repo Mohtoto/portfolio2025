@@ -1,6 +1,5 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import reactEcom from '../../public/ecom.png'
 export const DATA = {
   name: "Mohammad",
   initials: "MT",
@@ -219,7 +218,7 @@ export const DATA = {
         },
       ],
       image: "",
-      // video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "https://cdn.magicui.design/bento-grid.mp4",
     },
     // {
     //   title: "llm.report",
