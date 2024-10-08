@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import kat from '../../public/kat.png'
+import ecom from "../../public/ecom.png";
 
 interface Props {
   title: string;
@@ -28,6 +30,11 @@ interface Props {
   className?: string;
 }
 
+const images = [
+
+  // { src: kat, alt: "kat" },
+  { src: ecom, alt: "ecom" },
+]
 export function ProjectCard({
   title,
   href,
@@ -60,15 +67,15 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
-        {image && (
+        {images.map(({ src, alt }) => (
           <Image
-            src={image}
-            alt={title}
+            src={src}
+            alt={alt}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="h-40 w-full overflow-hidden object-cover object-top hover:scale-105 transition-transform duration-300 ease-out"
           />
-        )}
+        ))}
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
