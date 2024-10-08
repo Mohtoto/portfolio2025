@@ -6,10 +6,10 @@ export const DATA = {
   url: "https://dillion.io",
   location: "Perth Australia, WA",
   description:
-    "Software engineer/frontend developer loves learning and building complex things to learn more",
+    "Software Engineer/Frontend Developer loves learning and building complex things.",
   summary:
     "As a software engineer, I am passionate about building web applications with great user experiences. I use React, TypeScript, Node.js, Express.js, MongoDB, SQL, and TailwindCSS to create responsive, dynamic, and performant web pages and services. I also follow clean coding practices, such as ESLint, and use version control, CI/CD, and REST APIs to ensure the quality and reliability of my code.",
-  avatarUrl: "https://media.licdn.com/dms/image/v2/D5603AQGK1fPJh4OD5g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715053797014?e=1733356800&v=beta&t=TrfVY3My8pKJE0ytSYervX_k2pItlmQoE9J5dNrVd-0",
+  avatarUrl: "https://api.dicebear.com/9.x/notionists-neutral/svg?seed=Leo",
   skills: [
     "React",
     "Next.js",
@@ -20,11 +20,11 @@ export const DATA = {
     "HTML",
     "CSS",
     "storybook",
-    "React-testing"
+    "React-testing",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "hello@example.com",
@@ -32,31 +32,31 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/Mohtoto",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/mohammad-totonchy-622912250/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
+      // X: {
+      //   name: "X",
+      //   url: "https://dub.sh/dillion-twitter",
+      //   icon: Icons.x,
 
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: true,
-      },
+      //   navbar: true,
+      // },
+      // Youtube: {
+      //   name: "Youtube",
+      //   url: "https://dub.sh/dillion-youtube",
+      //   icon: Icons.youtube,
+      //   navbar: true,
+      // },
       email: {
         name: "Send Email",
         url: "#",
@@ -74,11 +74,43 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "https://versent.com.au/wp-content/uploads/2021/03/versent-logo-fb.jpg",
+      logoUrl:
+        "https://versent.com.au/wp-content/uploads/2021/03/versent-logo-fb.jpg",
       start: "January 2023",
       end: "current",
-      description:
-        "Next.js was used to build an internal employee bio application and Node.js with TypeScript to migrate MuleSoft to AWS. I developed APIs and structured flexible error-handling mechanisms. Jest was implemented for unit testing, while Cypress and Postman were used for automated and manual testing. I actively participated in daily stand-ups, integrated Slack and Confluence for better team collaboration, and contributed to sprint retrospectives. Working closely with cross-functional teams, I helped deliver high-quality products in an agile environment",
+      description: `
+        • Built new features for a Next.js application using TypeScript, TailwindCSS, NextUI, and Zustand for state management in a monorepo structure.
+        • Developed a pagination feature and implemented a large property UI module.
+        • Utilized SWR for efficient data fetching and caching.
+        • Tested user interactions with React Testing Library.
+        • Collaborated with the client in standups and meetings, using Confluence for documentation and Jira for ticket tracking.
+        `,
+
+      // [
+      //   `
+      // Project: Greenpages
+      // • Developed an internal application for employee bios using Next.js.
+      // • Integrated Slack and Confluence to streamline team communication and collaboration.
+      // • Refactored over 500 lines of repetitive code into readable, maintainable code blocks.
+      // • Actively participated in daily standups, ensuring progress alignment with project goals.
+      // `,
+      // ],
+      // [
+      //   `
+      // Project: CurBn
+      // • Migrated Mulesoft to AWS using Node.js, TypeScript, and AWS CDK.
+      // • Created APIs and structured error handling to improve flexibility and reliability in code.
+      // • Implemented unit testing with Jest, mocking API endpoints to ensure functionality.
+      // • Used Cypress and Postman for automated and manual testing of the application.
+      // • Played an active role in daily standups and retrospectives, facilitating communication across teams.
+      //   `,
+      // ],
+      // [
+      //   `
+      // Project: HBF
+      // • Developed 3 APIs using C# for the project, ensuring smooth backend functionality.
+      // `,
+      // ],
     },
     {
       company: "Frontend Simplified",
@@ -86,67 +118,71 @@ export const DATA = {
       href: "https://frontendsimplified.com/",
       location: "Remote",
       title: "Frontend Engineer",
-      logoUrl: "https://media.licdn.com/dms/image/v2/C560BAQGuzLomDSVnKw/company-logo_200_200/company-logo_200_200/0/1648018204916/frontend_simplified_logo?e=1735776000&v=beta&t=Dj3lHDuAB6-vRjI2GlkEM8QIkl9J2nxmtFIGIvkuk4Y",
+      logoUrl:
+        "https://media.licdn.com/dms/image/v2/C560BAQGuzLomDSVnKw/company-logo_200_200/company-logo_200_200/0/1648018204916/frontend_simplified_logo?e=1735776000&v=beta&t=Dj3lHDuAB6-vRjI2GlkEM8QIkl9J2nxmtFIGIvkuk4Y",
       start: "April 2022",
       end: "January 2023",
-      description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+      description: `Delivered 5 professional websites using HTML5, CSS3 (+ SCSS, BEM), JavaScript and React best practices. 
+        Improved website performance by compressing caching and lazy loading images and components.
+        Included SEO, responsive, multiplatform and hosting support, enabling their website to be used by any browser or device in the world. 
+        `,
+      // {
+      //   company: "Nvidia",F
+      //   href: "https://nvidia.com/",
+      //   badges: [],
+      //   location: "Santa Clara, CA",
+      //   title: "Software Engineer",
+      //   logoUrl: "/nvidia.png",
+      //   start: "January 2020",
+      //   end: "April 2020",
+      //   description:
+      //     "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
+      // },
+      // {
+      //   company: "Splunk",
+      //   href: "https://splunk.com",
+      //   badges: [],
+      //   location: "San Jose, CA",
+      //   title: "Software Engineer",
+      //   logoUrl: "/splunk.svg",
+      //   start: "January 2019",
+      //   end: "April 2019",
+      //   description:
+      //     "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
+      // },
+      // {
+      //   company: "Lime",
+      //   href: "https://li.me/",
+      //   badges: [],
+      //   location: "San Francisco, CA",
+      //   title: "Software Engineer",
+      //   logoUrl: "/lime.svg",
+      //   start: "January 2018",
+      //   end: "April 2018",
+      //   description:
+      //     "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
+      // },
+      // {
+      //   company: "Mitre Media",
+      //   href: "https://mitremedia.com/",
+      //   badges: [],
+      //   location: "Toronto, ON",
+      //   title: "Software Engineer",
+      //   logoUrl: "/mitremedia.png",
+      //   start: "May 2017",
+      //   end: "August 2017",
+      //   description:
+      //     "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+      // },
     },
-    // {
-    //   company: "Nvidia",
-    //   href: "https://nvidia.com/",
-    //   badges: [],
-    //   location: "Santa Clara, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/nvidia.png",
-    //   start: "January 2020",
-    //   end: "April 2020",
-    //   description:
-    //     "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    // },
-    // {
-    //   company: "Splunk",
-    //   href: "https://splunk.com",
-    //   badges: [],
-    //   location: "San Jose, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/splunk.svg",
-    //   start: "January 2019",
-    //   end: "April 2019",
-    //   description:
-    //     "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    // },
-    // {
-    //   company: "Lime",
-    //   href: "https://li.me/",
-    //   badges: [],
-    //   location: "San Francisco, CA",
-    //   title: "Software Engineer",
-    //   logoUrl: "/lime.svg",
-    //   start: "January 2018",
-    //   end: "April 2018",
-    //   description:
-    //     "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    // },
-    // {
-    //   company: "Mitre Media",
-    //   href: "https://mitremedia.com/",
-    //   badges: [],
-    //   location: "Toronto, ON",
-    //   title: "Software Engineer",
-    //   logoUrl: "/mitremedia.png",
-    //   start: "May 2017",
-    //   end: "August 2017",
-    //   description:
-    //     "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
-    // },
   ],
   education: [
     {
       school: "DataCore Jam 2024 - Participant",
       href: "https://www.credly.com/badges/def36888-af7e-4ec9-b454-521d436aaa12/linked_in_profile",
       degree: "Versent",
-      logoUrl: "https://images.credly.com/size/340x340/images/d7e65403-e1b3-48c0-ab55-738d16848f12/image.png",
+      logoUrl:
+        "https://images.credly.com/size/340x340/images/d7e65403-e1b3-48c0-ab55-738d16848f12/image.png",
       start: "2024",
       end: "2029",
     },
@@ -154,7 +190,8 @@ export const DATA = {
       school: "AWS Certified Cloud Practitioner",
       href: "https://www.credly.com/badges/5c21952e-8d55-4d04-a3e3-6f39ecb75d0b/public_url",
       degree: "Amazon Web Services Training and Certification",
-      logoUrl: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+      logoUrl:
+        "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
       start: "2024",
       end: "2027",
     },
@@ -184,7 +221,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image:'',
+      image: "",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
     },
@@ -295,6 +332,5 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
-  
   ],
 } as const;

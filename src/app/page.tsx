@@ -32,18 +32,20 @@ export default function Page() {
                 text={DATA.description}
               />
             </div>
-            {/* <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-14 border">
+            <BlurFade delay={BLUR_FADE_DELAY}>
+              <Avatar className="size-[100px] border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
-            </BlurFade> */}
+            </BlurFade>
           </div>
         </div>
       </section>
       <section id="about">
         <div className="flex items-center justify-center">
-          <H2text className="text-center mb-4">About</H2text>
+          <BlurFade>
+            <H2text className="text-center mb-4">About</H2text>
+          </BlurFade>
         </div>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
@@ -204,10 +206,10 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 if you have a direct question,
                 <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
+                  href={DATA.contact.social.LinkedIn.url}
+                  className="text-purple-500 hover:underline"
                 >
-                  send me a DM on Twitter,
+                  send me a message,
                 </Link>{" "}
                 and I&apos;ll get back to you when I can.
               </p>
