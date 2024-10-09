@@ -100,9 +100,8 @@ export const ResumeCard = ({
               }}
               className="mt-2 space-y-1 text-xs sm:text-sm"
             >
-
-              {description.map((item) => (
-                <p className="md:text-sm ">
+              {description.map((item,_) => (
+                <p key={_} className="md:text-sm ">
                   {item}
                 </p>
               ))}
