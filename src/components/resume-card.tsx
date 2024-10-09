@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -17,7 +17,7 @@ interface ResumeCardProps {
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: string[];
 }
 export const ResumeCard = ({
   logoUrl,
@@ -29,7 +29,7 @@ export const ResumeCard = ({
   period,
   description,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
@@ -98,9 +98,14 @@ export const ResumeCard = ({
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 space-y-4 text-xs sm:text-sm"
+              className="mt-2 space-y-1 text-xs sm:text-sm"
             >
-              {description}                  
+
+              {description.map((item) => (
+                <p className="md:text-sm ">
+                  {item}
+                </p>
+              ))}
             </motion.div>
           )}
         </div>

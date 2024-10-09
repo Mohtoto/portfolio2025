@@ -20,7 +20,10 @@ interface Props {
   dates: string;
   tags: readonly string[];
   link?: string;
-  image?: string;
+  image?:{ 
+    src: any;
+    alt: any;
+  };
   video?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -32,9 +35,10 @@ interface Props {
 
 const images = [
 
-  // { src: kat, alt: "kat" },
-  { src: ecom, alt: "ecom" },
+  {src: kat ,alt: 'kat'},
+  {src: ecom , alt: 'ecom'},
 ]
+
 export function ProjectCard({
   title,
   href,
@@ -42,8 +46,8 @@ export function ProjectCard({
   dates,
   tags,
   link,
-  image,
   video,
+  image,
   links,
   className,
 }: Props) {
@@ -67,15 +71,16 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
-        {images.map(({ src, alt }) => (
+        {image && ( 
           <Image
-            src={src}
-            alt={alt}
+            key={image.alt}
+            src={image.src}
+            alt={image.alt}
             width={500}
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top hover:scale-105 transition-transform duration-300 ease-out"
           />
-        ))}
+        )}
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">

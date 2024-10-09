@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-import kat from '../../public/kat.png'
+import kat from "../../public/kat.png";
 import ecom from "../../public/ecom.png";
 
 export const DATA = {
@@ -68,39 +68,20 @@ export const DATA = {
         "https://versent.com.au/wp-content/uploads/2021/03/versent-logo-fb.jpg",
       start: "January 2023",
       end: "current",
-      description: `
-        • Built new features for a Next.js application using TypeScript, TailwindCSS, NextUI, and Zustand for state management in a monorepo structure.
-        • Developed a pagination feature and implemented a large property UI module.
-        • Utilized SWR for efficient data fetching and caching.
-        • Tested user interactions with React Testing Library.
-        • Collaborated with the client in standups and meetings, using Confluence for documentation and Jira for ticket tracking.
-        `,
-
-      // [
-      //   `
-      // Project: Greenpages
-      // • Developed an internal application for employee bios using Next.js.
-      // • Integrated Slack and Confluence to streamline team communication and collaboration.
-      // • Refactored over 500 lines of repetitive code into readable, maintainable code blocks.
-      // • Actively participated in daily standups, ensuring progress alignment with project goals.
-      // `,
-      // ],
-      // [
-      //   `
-      // Project: CurBn
-      // • Migrated Mulesoft to AWS using Node.js, TypeScript, and AWS CDK.
-      // • Created APIs and structured error handling to improve flexibility and reliability in code.
-      // • Implemented unit testing with Jest, mocking API endpoints to ensure functionality.
-      // • Used Cypress and Postman for automated and manual testing of the application.
-      // • Played an active role in daily standups and retrospectives, facilitating communication across teams.
-      //   `,
-      // ],
-      // [
-      //   `
-      // Project: HBF
-      // • Developed 3 APIs using C# for the project, ensuring smooth backend functionality.
-      // `,
-      // ],
+      description: [
+        "• Built new features for a Next.js application using TypeScript, TailwindCSS, NextUI, and Zustand for state management in a monorepo structure.",
+        "• Developed a pagination feature and implemented a large property UI module.",
+        "• Utilized SWR for efficient data fetching and caching.",
+        "• Tested user interactions with React Testing Library.",
+        "• Collaborated with the client in standups and meetings, using Confluence for documentation and Jira for ticket tracking.",
+        "• Developed an internal application for employee bios using Next.js.",
+        "• Refactored over 500 lines of repetitive code into readable, maintainable code blocks.",
+        "• Migrated Mulesoft to AWS using Node.js, TypeScript, and AWS CDK.",
+        "• Created APIs and structured error handling to improve flexibility and reliability in code.",
+        "• Used Cypress and Postman for automated and manual testing of the application.",
+        "• Played an active role in daily standups and retrospectives, facilitating communication across teams.",
+        "• Developed 3 APIs using C# for the project, ensuring smooth backend functionality.",
+      ],
     },
     {
       company: "Frontend Simplified",
@@ -112,10 +93,11 @@ export const DATA = {
         "https://media.licdn.com/dms/image/v2/C560BAQGuzLomDSVnKw/company-logo_200_200/company-logo_200_200/0/1648018204916/frontend_simplified_logo?e=1735776000&v=beta&t=Dj3lHDuAB6-vRjI2GlkEM8QIkl9J2nxmtFIGIvkuk4Y",
       start: "April 2022",
       end: "January 2023",
-      description: `Delivered 5 professional websites using HTML5, CSS3 (+ SCSS, BEM), JavaScript and React best practices. 
-        Improved website performance by compressing caching and lazy loading images and components.
-        Included SEO, responsive, multiplatform and hosting support, enabling their website to be used by any browser or device in the world. 
-        `,
+      description: [
+        "• Delivered 5 professional websites using HTML5, CSS3 (+ SCSS, BEM), JavaScript, and React best practices.",
+        "• Improved website performance by compressing, caching, and lazy loading images and components.",
+        "• Included SEO, responsive, multiplatform, and hosting support, enabling the websites to be used by any browser or device worldwide.",
+      ],
       // {
       //   company: "Nvidia",F
       //   href: "https://nvidia.com/",
@@ -130,6 +112,7 @@ export const DATA = {
       // },
     },
   ],
+
   education: [
     {
       school: "DataCore Jam 2024 - Participant",
@@ -154,61 +137,59 @@ export const DATA = {
     {
       title: "Ecom-React",
       href: "https://github.com/Mohtoto/E-com-React",
-      dates: "Jan 2024 - Present",
-      active: true,
+      dates: "Apr 2022 - Oct 2022",
+      active: false,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+       "I built an Ecommerce Book application that allows users to create and manage an online bookstore using React, HTML, and CSS, with features like book categorization, shopping carts, and customizable design.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "React",
+        "HTML",
+        "CSS",
+        "Javascript",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: {ecom},
-      video:
-        "",
-    },
-    {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
-      active: true,
-      description:
-        "Designed, developed and sold animated UI components for developers.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://magicui.design",
+          href: "https://library-ecom.netlify.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/Mohtoto/E-com-React",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: {kat},
+      image:{src: ecom ,alt: 'ecom'},
+      video: "",
+    },
+    {
+      title: "Kat&Dog",
+      href: "https://katanddog.com.au",
+      dates: "June 2023 - Aug 2023",
+      active: false,
+      description:
+        "Designed and developed a booking system for pet grooming services, using React, HTML, CSS, and React Hook Form to allow clients to seamlessly book appointments for their pets.",
+      technologies: [
+        "React",
+        "Typescript",
+        "HTML",
+        "CSS",
+        "TailwindCSS",
+        "React Hook Forms",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://katanddog.com.au",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Mohtoto/kat-dog",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: { src: kat, alt: "kat" },
       video: "",
     },
   ],
@@ -225,4 +206,4 @@ export const DATA = {
       links: [],
     },
   ],
-} as const;
+}
