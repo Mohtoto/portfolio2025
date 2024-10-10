@@ -1,0 +1,113 @@
+---
+title: "Type Narrowing "
+publishedAt: "2024-10-03"
+summary: "My first post on my new blog."
+---
+
+# **Introduction to Type Narrowing**
+
+### Overview
+
+The `NarrowApplicationRoot` type is a custom TypeScript type designed to extract and narrow down specific properties from a larger type structure. It leverages TypeScript’s utility types—`Pick` and intersection types (`&`)—to create a type that focuses on a subset of relevant data fields while preserving the core identity of the original type.
+
+###
+
+### Purpose
+
+The primary purpose of `NarrowApplicationRoot` is to streamline the handling of application data by focusing on a specific set of properties within the `ApplicationRoot` type. This is particularly useful when only a specific subset of properties is needed for certain operations, reducing the complexity and improving type safety.
+
+# **Code Examples**
+
+### Type Definition:
+
+```typescript
+type NarrowApplicationRoot = Pick<
+  ApplicationRoot & {
+    ApplicationAddress: Array<
+      Pick<
+        ApplicationAddress,
+        | "FlatNumber"
+        | "LevelNumber"
+        | "LevelType"
+        | "Postcode"
+        | "State"
+        | "StreetName"
+        | "StreetNumber"
+        | "StreetType"
+        | "SubUnitType"
+        | "Suburb"
+      >
+    >;
+  },
+  "ObjectID" | "ApplicationAddress"
+>;
+
+```
+In this example:
+
+1. **Intersection Type (**`&`):
+    - Combines the existing `ApplicationRoot` type with a custom object that redefines the `ApplicationAddress` property.
+    - The custom object specifies that `ApplicationAddress` is an array, but only includes specific fields from the `ApplicationAddress` type.
+2. **Inner** `Pick`:
+    - Selects specific fields from the `ApplicationAddress` type, such as `FlatNumber`, `LevelNumber`, `Postcode`, etc.
+    - This results in a simplified version of `ApplicationAddress`, only containing the relevant properties.
+3. **Outer** `Pick`:
+    - Selects two properties, `ObjectID` and `ApplicationAddress`, from the combined intersection type.
+    - The result is a type that has only these two properties, with `ApplicationAddress` now being a narrowed-down array of address details.
+
+
+```typescript
+type ApplicationRoot = {
+  ObjectID: string;
+  ApplicantName: string;
+  ApplicationDate: Date;
+  ApplicationAddress: ApplicationAddress[];
+};
+type ApplicationAddress = {
+  FlatNumber: string;
+  LevelNumber: string;
+  LevelType: string;
+  Postcode: string;
+  State: string;
+  StreetName: string;
+  StreetNumber: string;
+  StreetType: string;
+  SubUnitType: string;
+  Suburb: string;
+  Country: string;
+};
+```
+
+### Using `NarrowApplicationRoot`
+
+Suppose you are developing a feature that only requires the `ObjectID` and specific address details (`FlatNumber`, `LevelNumber`, etc.), and you want to avoid loading or manipulating unnecessary data. Here’s how `NarrowApplicationRoot` can be used:
+
+```typescript
+const application: NarrowApplicationRoot = {
+  ObjectID: "12345",
+  ApplicationAddress: [
+    {
+      FlatNumber: "1A",
+      LevelNumber: "2",
+      LevelType: "Floor",
+      Postcode: "1234",
+      State: "NY",
+      StreetName: "Main",
+      StreetNumber: "123",
+      StreetType: "St",
+      SubUnitType: "Apt",
+      Suburb: "Suburbia",
+    },
+  ],
+};
+
+### Benefits
+
+- **Efficiency**: Only the necessary data fields are included, making the data structure leaner and easier to work with.
+- **Type Safety**: Ensures that only the expected fields are used, preventing accidental usage of unrelated properties.
+- **Readability**: Simplifies the understanding of the type structure by focusing on relevant fields.
+```
+# **Conclusion**
+### Conclusion
+
+The `NarrowApplicationRoot` type is a powerful tool for narrowing down large, complex types into more manageable and focused subsets. By combining intersection types and utility types like `Pick`, TypeScript developers can create highly specific types tailored to their application's needs, improving both the efficiency and clarity of their code.
